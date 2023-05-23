@@ -19,7 +19,7 @@ class MusicViewModel(private val repository: MusicRepository): ViewModel() {
 
     fun addMusic(musicParam : MusicModel) = repository.addMusic(musicParam)
 
-    fun createMovie() {
+    fun createMusic() {
         if (!validateData()){
             status.value = WRONG_INFORMATION
             return
