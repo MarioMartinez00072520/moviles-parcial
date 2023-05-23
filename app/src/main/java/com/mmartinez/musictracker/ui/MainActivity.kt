@@ -1,7 +1,8 @@
-package com.mmartinez.musictracker
+package com.mmartinez.musictracker.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mmartinez.musictracker.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
