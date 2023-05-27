@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/music_item_card_view"
             android:layout_width="match_parent"
-            android:layout_height="135dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/med_gap"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:backgroundTint="@color/cardview"
+            android:layout_marginTop="@dimen/med_gap"
+            android:layout_marginEnd="@dimen/med_gap"
+            android:layout_marginBottom="@dimen/med_gap"
+            android:backgroundTint="@color/secondary"
+            app:cardCornerRadius="@dimen/med_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -24,19 +31,20 @@
                 android:padding="@dimen/med_gap">
 
                 <TextView
-                    android:id="@+id/music_genre_text_view"
+                    android:id="@+id/music_item_genre_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/med_gap"
-                    android:text="Genre" />
+                    android:layout_weight="1"
+                    android:text="Genre goes here" />
 
                 <TextView
-                    android:id="@+id/music_instruments_text_view"
+                    android:id="@+id/music_item_instruments_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/med_gap"
-                    android:text="Instruments" />
+                    android:layout_weight="1"
+                    android:text="Instruments go here" />
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,39 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    >
     <data>
         <variable
             name="viewmodel"
-            type="com.mmartinez.musictracker.ui.music.viewmodel.MusicViewModel" />
+            type="com.mmartinez.musictracker.ui.music.home.HomeViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.music.home.recyclerview.HomeFragment">
+        tools:context=".ui.music.home.HomeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
-            android:id="@+id/title_text_view"
+            android:id="@+id/home_title_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Music Tracker"
-            android:textStyle="bold|italic"
+            android:layout_marginTop="@dimen/med_gap"
+            android:text="@string/app_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginStart="@dimen/med_gap"
             android:layout_marginTop="@dimen/med_gap"
             android:layout_marginEnd="@dimen/med_gap"
+            android:layout_marginBottom="@dimen/med_gap"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+            app:layout_constraintTop_toBottomOf="@+id/home_title_text_view" />
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/med_gap"
+            android:layout_marginBottom="@dimen/med_gap"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            app:backgroundTint="@color/accent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

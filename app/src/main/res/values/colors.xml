@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
-    <color name="cardview">#b0b0b0</color>
+    <color name="primary">#003dca</color>
+    <color name="secondary">#a5d4ff</color>
+    <color name="accent">#dadeff</color>
+    <color name="neutral">#919094</color>
 </resources>
